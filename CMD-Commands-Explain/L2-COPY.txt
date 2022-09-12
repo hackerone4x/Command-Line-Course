@@ -1,0 +1,6 @@
+Command:
+        COPY
+Example:
+        C:\> COPY autoexec.bat autoexec.BAK
+Notes:
+      Copies specified file or files. Can be used to copy files to duplicates with different file names or to copy files into a different directory without changing names

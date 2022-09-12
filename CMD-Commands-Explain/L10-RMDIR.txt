@@ -1,0 +1,6 @@
+Command:
+        RMDIR
+Example:
+        C:\> rmdir backup
+Notes:
+      Removes a directory.

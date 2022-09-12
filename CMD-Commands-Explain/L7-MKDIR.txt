@@ -1,0 +1,6 @@
+Command:
+        MKDIR
+Example:
+        C:\> MKDIR NewDIR
+Notes:
+      Creates a new directory in the specified path.

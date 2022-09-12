@@ -1,0 +1,7 @@
+Command:
+        EDLIN
+Example:
+        C:\> edlin 
+        autoexec.bat
+Notes:
+      Starts edlin, a line editor that can be used to edit text files. In this example, it is being used to edit the autoexec.bat file.

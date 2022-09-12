@@ -1,0 +1,7 @@
+Command:
+        MORE
+Example:
+        C:\> MORE 
+        autoexec.bat
+Notes:
+      Displays contents of a file, one screen at a time. It is mostly used for text files.

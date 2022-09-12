@@ -1,0 +1,7 @@
+Command:
+        DEL
+Example:
+        C:\> DEL autoexec.BAK
+        C:\> DEL C:\backups\*.BAK
+Notes:
+      Deletes a file or files. Can be used to delete files in the current working directory or in some other directory. Can also be used with wildcard characters to delete groups of files.

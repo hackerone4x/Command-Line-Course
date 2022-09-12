@@ -1,0 +1,8 @@
+Command:
+        DIR
+Example:
+        C:\> DIR
+        C:\> DIR 
+        c:\backups\*.txt
+Notes:
+      Displays all contents -- files and directories -- in the specified directory. If no directory is specified, it refers to the contents of the current directory. It can also be used with wildcard characters to display only specific files.

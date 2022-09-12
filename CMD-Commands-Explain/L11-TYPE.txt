@@ -1,0 +1,6 @@
+Command:
+        TYPE
+Example:
+        C:\> type autoexec.bat
+Notes:
+      Displays content of a text file, without page breaks.

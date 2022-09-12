@@ -1,0 +1,7 @@
+Command:
+        PROMPT
+Example:
+        C:\> prompt $p $d$g
+        C:\UTIL Fri 11-05-2021>
+Notes:
+      Modifies the default prompt. In this example, parameters are used with the command to set the prompt display as the current drive and path, the day and date and the greater-than symbol. The resulting prompt is shown in the example.

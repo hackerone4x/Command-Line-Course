@@ -1,0 +1,6 @@
+Command:
+        FORMAT
+Example:
+        C:\> FORMAT a:
+Notes:
+      Formats a disk so it can be used with MS-DOS.

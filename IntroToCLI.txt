@@ -1,0 +1,135 @@
+What is a command-line interface?
+A command-line interface (CLI) is a text-based user interface (UI) used to run programs, manage computer files and interact with the computer. Command-line interfaces are also called command-line user interfaces, console user interfaces and character user interfaces. CLIs accept as input commands that are entered by keyboard; the commands invoked at the command prompt are then run by the computer.
+
+Today, most vendors offer the graphical user interface (GUI) as the default for operating systems (OSes) such as Windows, Linux and macOS. Most current Unix-based systems offer both a command-line interface and a graphical user interface.
+
+The MS-DOS operating system and the command shell in the Windows operating system are examples of command-line interfaces. In addition, programming language development platforms such as Python can support command-line interfaces.
+
+The command line dropped in popularity following the introduction of GUI-based personal computer OSes like Microsoft Windows and Apple's "classic" Mac OS in the 1980s. The command line remains an important tool for IT professionals, software developers, sys admins, network administrators and many others who prefer a more precise and reproduceable interface to their systems.
+
+What is a shell?
+In computing, a shell program provides access to an operating system's components. The shell gives users (or other programs) a way to get "inside" the system to run programs or manage configurations. The shell defines the boundary between inside and outside.
+
+The following are the two types of operating system shells:
+
+CLI-based shells offer users a concise and efficient mode of interacting with the OS, without requiring the overhead of a graphical user interface.
+GUI-based shells are considered easier for beginners to use, but they also include a CLI-based shell for system administrators or power users who prefer to interact at a command prompt.
+Bash is the most commonly used command-line shell for Unix-based OSes including Linux.
+
+The software that handles the command-line interface is commonly referred to as a command language interpreter, a command processor or command interpreter. Two well-known CLI shells are PowerShell for Windows and Bash for Linux and macOS.
+
+
+Shells are the outermost layer of the OS and are often separated from the underlying OS kernel. A shell operates like an application and can be replaced as needed. An OS may have more than one shell available, as in the following examples:
+
+Microsoft Windows includes the Command Prompt app as well as the PowerShell application, both of which can be used to interact directly with the computer. The Windows Subsystem for Linux also provides a CLI with access to the underlying system.
+Linux and other Unix-based operating systems usually provide the Bourne-Again Shell (bash) as the default shell. Other shells, including the C shell, Z shell and others, can be configured as the default system shell.
+Because the shell is only one layer above the OS, users can perform operations that are not available in other interface types, such as moving files within system folders and deleting locked files.
+
+To get the greatest benefit from using a CLI shell, users should learn a scripting language. Most command line shells can save sequences of commands in a script or batch file which may be fully programmable. Shell scripting is the foundation of basic systems management automation.
+
+How do CLIs work?
+Once a computer system is running, its CLI opens on a blank screen with a command prompt and commands can be entered.
+
+Types of CLI commands include the following:
+
+system commands that are encoded as part of the operating system interface;
+executable programs that, when successfully invoked, run text-based or graphical applications; and
+batch programs (or batch files or shell scripts) which are text files listing a sequence of commands. When successfully invoked, a batch program runs its commands which may include both system commands and executable programs.
+CLI is more than a simple command/response system, as most have additional features that make one preferable to another. Some features include the following:
+
+Scripting capability enables users to write programs that can be run on the system from the command line.
+Command pipes enable users to direct the output of one program to be the input for another program ("piping" the flow of data).
+System variables can be set at the command line, or the values of those variables displayed.
+Command history features enable the user to recall previous commands issued. Some save command history for the session (like PowerShell), others can be configured to store session history for longer (like bash).
+Commands and syntax for CLIs tend to be very stable over time, in part to enable backward compatibility for scripts.
+
+Prompts and commands
+Depending on the operating system and the CLI, there may be hundreds or even thousands of different executable commands available. The set of commands may vary dramatically between operating systems or applications.
+
+For example, Microsoft defines hundreds of cmdlets as "lightweight commands" to be used in PowerShell; PowerShell functions are lists of cmdlets that can be run at the command line.
+
+
+Some commands run at the command line by themselves, such as the dir command:
+
+C:\> dir
+
+Commands can also be used with arguments (sometimes referred to as parameters) that modify how the command should be run. Arguments follow the command and provide additional details or specifics.
+
+The cd "change directory" command in many CLIs is used to change the current working directory when the desired new directory path is included as an argument -- but in some cases (as in MS-DOS or the Windows command prompt) the command by itself returns the current working directory.
+
+This command resets the current working directory:
+
+cd \documents\user\working
+
+Arguments enable command-line users to get very specific results that are sometimes not available through a graphical interface.
+
+Modern CLIs provide pipes, or mechanisms for taking the output of one command and sending it as input to another command. The vertical bar, or "|" symbol, is often used for this purpose.
+
+The following "one-liner" uses pipes to string together several PowerShell commands to retrieve detailed network configuration information from a Windows machine:
+
+Get-NetIPAddress | Sort InterfaceIndex | FT InterfaceIndex, InterfaceAlias, AddressFamily, IPAddress
+Even though this string is entered at the command line as if it were a single command, it includes the following consecutive commands:
+
+Get-NetIPAddress retrieves all IP configuration information for the computer when entered without any arguments.
+Sort InterfaceIndex accepts as input the output of the Get-NetIPAddress cmdlet and sorts it by the InterfaceIndex value associated with each IP address included in the computer configuration.
+FT InterfaceIndex, InterfaceAlias, AddressFamily, IPAddress uses the Format-Table (FT) command to format the sorted output of the previous command and displays the specified values for each IP address.
+Backward compatibility is often a goal when new CLIs are introduced to replace existing CLIs, as when Microsoft replaced MS-DOS with the Windows Command Prompt. Though some MS-DOS commands are no longer supported, most will still work in PowerShell as originally intended.
+
+Common MS-DOS commands include the following:
+
+Command	Example	Notes
+CD	C:\> CD \user\programs
+C:\user\programs>	Changes the current directory to the specified path. When entered with no path, it displays the current working directory's name. If the path is included in the command prompt, the prompt will change as in the example (see also PROMPT, below).
+CHKDSK	C:\> CHKDSK a:	Checks the specified disk -- in this case, the floppy disk in the A: drive -- and returns a status report showing the disk size, number of files and directories in use and number of bytes used.
+COPY	C:\> COPY autoexec.bat autoexec.BAK	Copies specified file or files. Can be used to copy files to duplicates with different file names or to copy files into a different directory without changing names.
+DEL	C:\> DEL autoexec.BAK
+C:\> DEL C:\backups\*.BAK	Deletes a file or files. Can be used to delete files in the current working directory or in some other directory. Can also be used with wildcard characters to delete groups of files.
+DIR	C:\> DIR
+C:\> DIR c:\backups\*.txt	Displays all contents -- files and directories -- in the specified directory. If no directory is specified, it refers to the contents of the current directory. It can also be used with wildcard characters to display only specific files.
+EDLIN	C:\> edlin autoexec.bat	Starts edlin, a line editor that can be used to edit text files. In this example, it is being used to edit the autoexec.bat file.
+FORMAT	C:\> FORMAT a:	Formats a disk so it can be used with MS-DOS.
+MKDIR	C:\> MKDIR c:\NewDIR	Creates a new directory in the specified path.
+MORE	C:\> MORE autoexec.bat	Displays contents of a file, one screen at a time. It is mostly used for text files.
+PROMPT	C:\> prompt $p $d$g
+C:\UTIL Fri 11-05-2021>	Modifies the default prompt. In this example, parameters are used with the command to set the prompt display as the current drive and path, the day and date and the greater-than symbol. The resulting prompt is shown in the example.
+RMDIR	C:\> rmdir c:\backup	Removes a directory.
+TYPE	C:\> type autoexec.bat	Displays content of a text file, without page breaks.
+CLI versus GUI
+The graphical user interface is the most popular user interface today. A GUI uses windows, menus and icons to execute commands. Using a mouse is the most common way to navigate through a GUI, although many GUIs allow some navigation and program execution via a keyboard.
+
+Microsoft Word is an example of a GUI-based application. A user can change options for page layouts and styles by selecting the corresponding icon or pull-down menu with a mouse or keyboard.
+
+a PowerShell command line
+An example of output from the PowerShell command line
+One advantage of a GUI is the interface can visually display available functions. However, because it relies on graphical display, a GUI may not have the same level of functionality and granular control as a command-line interface. For example, it can require numerous clicks and movement through several dialog boxes in a GUI to accomplish the same result as a single command line.
+
+In addition, GUIs do not readily support scripting or automation. For common tasks, a user must repeat each click or navigate each dialog within the GUI manually.
+
+System administrators who may need to manage hundreds -- or hundreds of thousands -- of systems and configurations will find a GUI far less efficient than a CLI. A simple CLI command can easily adjust configurations for a large group of systems at once.
+
+Commands and arguments can also be combined and saved, then executed as a script each time that specific action -- or comprehensive set of actions -- is required. The CLI is the preferred tool for many enterprise-wide systems management tasks.
+
+an example of the Windows 11 graphical user interface
+Windows 11 GUI: The Start menu
+CLI advantages and disadvantages
+The following are advantages of a command-line interface:
+
+granular control of an OS or application;
+more efficient management of a large number of systems;
+ability to store scripts to automate regular tasks; and
+basic command-line interface knowledge can enable troubleshooting of network connection issues or resolving other system tasks.
+The disadvantages of a command-line interface are the following:
+
+GUI is more user friendly;
+steeper learning curve associated with memorizing commands and complex syntax/arguments; and
+different commands used in different shells.
+
+The command line is a great place to become an expert at using a computer. Once you're ready, it's also the only place to learn how to write shell scripts.
+
+This was last updated in December 2021
+Continue Reading About command-line interface (CLI)
+Work a command-line interface in Linux with these permissions and prompts
+Advanced shell scripting for IT ops professionals: Free chapter
+PowerShell vs. Bash: Key differences for Windows deployments
+When and how to use the AWS Command Line Interface
+These IT automation scripts take little effort and save a lot of work

@@ -1,0 +1,7 @@
+Command:
+        CD
+Example:
+        C:\> CD \user\programs
+        C:\user\programs>
+Notes:
+Changes the current directory to the specified path. When entered with no path, it displays the current working directory's name. If the path is included in the command prompt, the prompt will change as in the example (see also PROMPT, below).

@@ -1,0 +1,6 @@
+Command:
+        CHKDSK
+Example:
+        C:\> CHKDSK a:
+Notes:
+      Checks the specified disk -- in this case, the floppy disk in the A: drive -- and returns a status report showing the disk size, number of files and directories in use and number of bytes used.
